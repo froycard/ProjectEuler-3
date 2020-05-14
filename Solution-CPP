@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main()
+{
+	auto num = 600851475143;
+	unsigned sol = 0;
+	unsigned i = 2;
+	
+	while(i*i <= num)
+	{
+		if (num%i) ++i;
+		else num/=i;
+	}
+	if (num>1 && num>sol) sol=num;
+	
+	std::cout << sol << std::endl;
+
+	return 0;
+}
